@@ -1,6 +1,7 @@
 package pkg
 
 import (
+	"github.com/andremartinsds/faker-br/pkg/test"
 	"strconv"
 	"testing"
 )
@@ -10,7 +11,7 @@ func TestFaker(t *testing.T) {
 		n := G.Numero(11)
 		size := len(strconv.Itoa(n))
 
-		assertLen(t, 11, size)
+		test.AssertLen(t, 11, size)
 	})
 	t.Run("deve retornar um cep de forma randomica", func(t *testing.T) {
 		cep := G.Cep()
@@ -19,6 +20,6 @@ func TestFaker(t *testing.T) {
 			t.Errorf("cep is empty")
 		}
 
-		assertLen(t, len(cep), 8)
+		test.AssertLen(t, len(cep), 8)
 	})
 }

@@ -1,11 +1,11 @@
-package pkg
+package internal
 
 import (
 	"math/rand"
 	"strconv"
 )
 
-func cep() string {
+func CepRange() string {
 	cep := []string{
 		"69900000", "91514420",
 		"57000000", "68900000", "69000000", "40000000", "60000000",
@@ -123,7 +123,7 @@ func cep() string {
 
 	return cep[rand.Intn(len(cep))]
 }
-func cidade() string {
+func CidadeRange() string {
 	cidade := []string{
 		"São Paulo", "Rio de Janeiro", "Belo Horizonte", "Porto Alegre", "Curitiba", "Salvador",
 		"Recife", "Fortaleza", "Brasília", "Manaus", "Belém", "Goiânia", "Campinas", "São Luís",
@@ -181,7 +181,7 @@ func cidade() string {
 
 	return cidade[rand.Intn(len(cidade))]
 }
-func estado() string {
+func EstadoRange() string {
 	estado := []string{
 		"Acre", "Alagoas", "Amapá", "Amazonas", "Bahia", "Ceará", "Distrito Federal",
 		"Espírito Santo", "Goiás", "Maranhão", "Mato Grosso", "Mato Grosso do Sul",
@@ -191,7 +191,7 @@ func estado() string {
 	}
 	return estado[rand.Intn(len(estado))]
 }
-func bairro() string {
+func BairroRange() string {
 	bairro := []string{
 		"Centro", "Jardim Paulista", "Copacabana", "Ipanema", "Leblon", "Botafogo",
 		"Barra da Tijuca", "Tijuca", "Flamengo", "Glória", "Lapa", "Santa Teresa",
@@ -213,7 +213,7 @@ func bairro() string {
 	}
 	return bairro[rand.Intn(len(bairro))]
 }
-func numero(size int) int {
+func NumeroPorTamanho(size int) int {
 	chars := "0123456789"
 	numero := make([]byte, size)
 	for i, _ := range numero {
@@ -222,7 +222,7 @@ func numero(size int) int {
 	n, _ := strconv.Atoi(string(numero))
 	return n
 }
-func complemento() string {
+func ComplementoRange() string {
 	complemento := []string{
 		"Apto 101", "Apto 202", "Apto 303", "Apto 404", "Apto 505", "Apto 606",
 		"Bloco A", "Bloco B", "Bloco C", "Bloco D", "Bloco E", "Bloco F",
@@ -237,7 +237,7 @@ func complemento() string {
 	}
 	return complemento[rand.Intn(len(complemento))]
 }
-func observacao() string {
+func ObservacaoRange() string {
 	obs := []string{
 		"Portão azul", "Próximo ao supermercado", "Entrada pela lateral",
 		"Ao lado da padaria", "Frente para a praça", "Próximo ao ponto de ônibus",
@@ -260,7 +260,7 @@ func observacao() string {
 	}
 	return obs[rand.Intn(len(obs))]
 }
-func uf() string {
+func UfRange() string {
 	u := []string{
 		"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG",
 		"PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO",

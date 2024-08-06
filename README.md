@@ -1,10 +1,47 @@
-# faker-br
+# Faker-br ![Bandeira do Brasil](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/50px-Flag_of_Brazil.svg.png)
 
-## How to install
+<p> Pequena lib para ajudar a adicionar dados aleatórios </p>
+
+## Como instalar
 `go get github.com/andremartinsds/faker-br`
 
-## How to use
+## Como usar
 
+#### Variavel Global para metodos fakers
+`var G *Faker`
+
+#### Retorna um cep aleatório
+`G.Cep()` 
+
+#### Retorna uma cidade aleatória
+`G.Cidade()` 
+
+#### Retorna um estado aleatório
+`G.Estado()` 
+
+#### Retorna um bairro aleatório
+`G.Bairro()` 
+
+#### Retorna uma unidade federativa aleatória
+`G.UF()` 
+
+#### Retorna um numero a partir de um size adicionado como parâmetro
+`G.Numero(size int)` 
+
+#### Retorna um complemento aleatório
+`G.Complemento()`
+
+#### Retorna uma observação aleatória
+`G.Observacao()`
+
+#### Retorna um cnpj aleatório
+`G.Cnpj()`
+
+#### Retorna inscrição estadual aleatória de SP
+`G.GeraInscricaoEstadualSP()`
+
+
+## Modo detalhado
 ```golang
 
 package anypackage
